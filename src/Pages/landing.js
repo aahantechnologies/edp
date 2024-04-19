@@ -10,14 +10,30 @@ import pro6 from '../Images/profile-sixth.png'
 import pro7 from '../Images/profile-seventh.png'
 import pro8 from '../Images/profile-eight.png'
 import { Link } from 'react-router-dom';
+import Slider from 'react-slick';
+const settings = {
+  dots: true,
+  infinite: true,
+  speed: 500,
+  row: 1,
+  autoplay: true,
+  autoplaySpeed: 3000,
+  initialSlide: 0,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  lazyLoad: true,
+  
+};
 export default function LandingPage() {
   return (
     <div className='bg-[#e8f5ff] p-8'>
-        <h1 className='text-8xl font-bold text-[#0174cf] '>Welcome!</h1>
+        <h1 className='text-6xl lg:text-8xl md:text-8xl font-bold text-[#0174cf] '>Welcome!</h1>
         <h1 className='text-3xl font-bold text-[#5d9dcf] mt-4'>Ward 2</h1>
         <p className='text-xl font-medium text-[#87afcf] mt-4'>Please double-click on your profile to sign in</p>
-         <div className='flex justify-center gap-x-8 mt-10'>
-        <div >
+        <Slider {...settings} >
+        <section class="relative isolate overflow-hidden ">
+         <div className='flex flex-wrap justify-center lg:flex  md:flex sm:items-center gap-x-8 mt-10'>
+        <div  className='mt-2 lg:mt-0 md:mt-0'>
             <Link to="/login">
         <Card  sx={{ width:"18rem" ,display:"flex",justifyContent:"space-evenly",alignItems:"center",flexDirection: "column",padding:"1rem",borderRadius:"20px"}}>
         <Avatar sx={{width:"50%", height:"50%",marginTop:"10px"}} alt="Travis Howard" src={pro1} />
@@ -26,7 +42,7 @@ export default function LandingPage() {
         </Card>
         </Link>
         </div>
-        <div >
+        <div className='mt-2 lg:mt-0 md:mt-0'>
         <Link to="/login">
         <Card  sx={{ width:"18rem" ,display:"flex",justifyContent:"space-evenly",alignItems:"center",flexDirection: "column",padding:"1rem",borderRadius:"20px"}}>
         <Avatar sx={{width:"50%", height:"50%",marginTop:"10px"}} alt="Travis Howard" src={pro2} />
@@ -35,7 +51,7 @@ export default function LandingPage() {
         </Card>
         </Link>
         </div>
-        <div >
+        <div className='mt-2 lg:mt-0 md:mt-0'>
         <Link to="/login">
         <Card  sx={{ width:"18rem" ,display:"flex",justifyContent:"space-evenly",alignItems:"center",flexDirection: "column",padding:"1rem",borderRadius:"20px"}}>
         <Avatar sx={{width:"50%", height:"50%",marginTop:"10px"}} alt="Travis Howard" src={pro3} />
@@ -47,6 +63,74 @@ export default function LandingPage() {
        
        
         </div>
+        </section>
+        <section class="relative isolate overflow-hidden ">
+         <div className='flex flex-wrap justify-center lg:flex  md:flex sm:items-center gap-x-8 mt-10'>
+        <div  className='mt-2 lg:mt-0 md:mt-0'>
+            <Link to="/login">
+        <Card  sx={{ width:"18rem" ,display:"flex",justifyContent:"space-evenly",alignItems:"center",flexDirection: "column",padding:"1rem",borderRadius:"20px"}}>
+        <Avatar sx={{width:"50%", height:"50%",marginTop:"10px"}} alt="Travis Howard" src={pro1} />
+        <h1 className='text-2xl font-bold text-[#0174cf] mt-2'>Brooklyn Simmons</h1>
+        <p className='text-base font-medium text-[#87afcf] mt-2'>Acme Co.</p>
+        </Card>
+        </Link>
+        </div>
+        <div className='mt-2 lg:mt-0 md:mt-0'>
+        <Link to="/login">
+        <Card  sx={{ width:"18rem" ,display:"flex",justifyContent:"space-evenly",alignItems:"center",flexDirection: "column",padding:"1rem",borderRadius:"20px"}}>
+        <Avatar sx={{width:"50%", height:"50%",marginTop:"10px"}} alt="Travis Howard" src={pro2} />
+        <h1 className='text-2xl font-bold text-[#0174cf] mt-2'>Kathryn Murphy</h1>
+        <p className='text-base font-medium text-[#87afcf] mt-2'>Acme Co.</p>
+        </Card>
+        </Link>
+        </div>
+        <div className='mt-2 lg:mt-0 md:mt-0'>
+        <Link to="/login">
+        <Card  sx={{ width:"18rem" ,display:"flex",justifyContent:"space-evenly",alignItems:"center",flexDirection: "column",padding:"1rem",borderRadius:"20px"}}>
+        <Avatar sx={{width:"50%", height:"50%",marginTop:"10px"}} alt="Travis Howard" src={pro3} />
+        <h1 className='text-2xl font-bold text-[#0174cf] mt-2'>Leslie Alexander</h1>
+        <p className='text-base font-medium text-[#87afcf] mt-2'>Acme Co.</p>
+        </Card>
+        </Link>
+        </div>
+       
+       
+        </div>
+        </section>
+        <section class="relative isolate overflow-hidden ">
+         <div className='flex flex-wrap justify-center lg:flex  md:flex sm:items-center gap-x-8 mt-10'>
+        <div  className='mt-2 lg:mt-0 md:mt-0'>
+            <Link to="/login">
+        <Card  sx={{ width:"18rem" ,display:"flex",justifyContent:"space-evenly",alignItems:"center",flexDirection: "column",padding:"1rem",borderRadius:"20px"}}>
+        <Avatar sx={{width:"50%", height:"50%",marginTop:"10px"}} alt="Travis Howard" src={pro1} />
+        <h1 className='text-2xl font-bold text-[#0174cf] mt-2'>Brooklyn Simmons</h1>
+        <p className='text-base font-medium text-[#87afcf] mt-2'>Acme Co.</p>
+        </Card>
+        </Link>
+        </div>
+        <div className='mt-2 lg:mt-0 md:mt-0'>
+        <Link to="/login">
+        <Card  sx={{ width:"18rem" ,display:"flex",justifyContent:"space-evenly",alignItems:"center",flexDirection: "column",padding:"1rem",borderRadius:"20px"}}>
+        <Avatar sx={{width:"50%", height:"50%",marginTop:"10px"}} alt="Travis Howard" src={pro2} />
+        <h1 className='text-2xl font-bold text-[#0174cf] mt-2'>Kathryn Murphy</h1>
+        <p className='text-base font-medium text-[#87afcf] mt-2'>Acme Co.</p>
+        </Card>
+        </Link>
+        </div>
+        <div className='mt-2 lg:mt-0 md:mt-0'>
+        <Link to="/login">
+        <Card  sx={{ width:"18rem" ,display:"flex",justifyContent:"space-evenly",alignItems:"center",flexDirection: "column",padding:"1rem",borderRadius:"20px"}}>
+        <Avatar sx={{width:"50%", height:"50%",marginTop:"10px"}} alt="Travis Howard" src={pro3} />
+        <h1 className='text-2xl font-bold text-[#0174cf] mt-2'>Leslie Alexander</h1>
+        <p className='text-base font-medium text-[#87afcf] mt-2'>Acme Co.</p>
+        </Card>
+        </Link>
+        </div>
+       
+       
+        </div>
+        </section>
+        </Slider>
         <div
         style={{display: 'flex', flexDirection: 'row', alignItems: 'center',marginTop:"4rem"}}
       >

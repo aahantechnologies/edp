@@ -1,4 +1,7 @@
+import { Pagination, PaginationItem } from "@mui/material";
 import React from "react";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 export default function CheckUp() {
   return (
@@ -53,6 +56,17 @@ export default function CheckUp() {
             1x1x1
           </p>
         </div>
+        <Pagination
+          count={5}
+          size="small"
+          sx={{marginTop:"10px",display:"flex",justifyContent:"center"}}
+          // renderItem={(item) => (
+          //   <PaginationItem
+          //     slots={{ previous: ArrowBackIcon, next: ArrowForwardIcon }}
+          //     {...item}
+          //   />
+          // )}
+        />
       </div>
     </div>
   );
